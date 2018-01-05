@@ -1,6 +1,19 @@
+cookie:
 1、服务器可以向客户端写内容
 2、只能文本内容
 3、客户端可以阻止服务器写入
 4、只能拿自己webapp写入的东西
 5、Cookie分为两种：a.属于窗口/子窗口  b.属于文本
 6、一个servlet/jsp设置的Cookie能够被同一个路劲下面或者子路劲下面的servlet/jsp读到
+
+session:
+1、session记录在服务器端
+
+session实现方式：1、通过Cookie实现；  2、重写URL实现
+
+规则：
+如果浏览器支持cookie ，创建session时把session id保存在cookie里
+如果不支持cookie，必须自己编程使用URL重写的方式实现session
+  response.endcodeURL();
+                 转码
+      URL后面加入sessionid

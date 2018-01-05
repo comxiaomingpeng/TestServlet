@@ -19,8 +19,9 @@ public class ShowCookies extends HttpServlet {
 		Cookie[] cookies = request.getCookies();
 		Cookie cookie = null;
 		if (cookies != null) {
-			cookie.getName();
-			cookie.getValue();
+
+			pw.println("<html><head><title>ShowCookie</title></head><body><p>hjdhjhjh</p>" + cookie.getName()
+					+ cookie.getValue() + "</body></html>");
 		}
 	}
 
