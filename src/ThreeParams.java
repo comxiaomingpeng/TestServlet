@@ -9,19 +9,22 @@ import javax.servlet.http.HttpServletResponse;
 public class ThreeParams extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		PrintWriter pw = resp.getWriter();
-		pw.println(req.getParameter("Param1"));
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+		pw.println(request.getParameter("param1"));
 		pw.println("<br/>");
-		pw.println(req.getParameter("Param2"));
+		pw.println(request.getParameter("param2"));
 		pw.println("<br/>");
-		pw.println(req.getParameter("Param3"));
+		pw.println(request.getParameter("param3"));
 
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doGet(req, resp);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("dopost");
+		
+		doGet(request, response);
 	}
 	
 	
