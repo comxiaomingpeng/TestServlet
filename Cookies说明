@@ -17,3 +17,7 @@ session实现方式：1、通过Cookie实现；  2、重写URL实现
   response.endcodeURL();
                  转码
       URL后面加入sessionid
+      
+      
+JSP内置对象：
+out request   response    pageContext   session   application  config    exception page
